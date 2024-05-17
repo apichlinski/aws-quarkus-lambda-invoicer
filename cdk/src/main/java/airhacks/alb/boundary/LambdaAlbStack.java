@@ -21,12 +21,12 @@ public class LambdaAlbStack extends Stack {
     public LambdaAlbStack(Construct scope, String id) {
         super(scope, id+"-alb-stack");
         var configuration = Map.of(
-            "message", "hello, quarkus as AWS Lambda");
+            "message", "Invoicer (Quarkus as AWS Lambda)");
 
         var quarkuLambda = new QuarkusLambda(this,FUNCTION_NAME,configuration);
         var publicVPCConstruct = new PublicVPC(this);
         var publicVPC = publicVPCConstruct.getVpc();
-        var alb = new Alb(this, publicVPC, "AirhacksLambdaLB");
+        var alb = new Alb(this, publicVPC, "InvoicerLambdaLB");
 
         var function = quarkuLambda.getFunction();
         var lambdaTarget = new LambdaTarget(function);
@@ -45,6 +45,7 @@ public class LambdaAlbStack extends Stack {
         CfnOutput.Builder.create(this, "FunctionARN").value(function.getFunctionArn()).build();
         var url = loadBalancer.getLoadBalancerDnsName();
         CfnOutput.Builder.create(this, "LoadBalancerDNSName").value(url).build();
-        CfnOutput.Builder.create(this, "LoadBalancerCurlOutput").value("curl -i http://"+url+"/hello").build();
+        //CfnOutput.Builder.create(this, "LoadBalancerCurlOutput").value("curl -i http://"+url+"/hello").build();
+        CfnOutput.Builder.create(this, "LoadBalancerCurlOutput").value("curl -i http://"+url+"/invoicer").build();
     }
 }

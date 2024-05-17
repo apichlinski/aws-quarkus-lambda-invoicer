@@ -88,7 +88,8 @@ public class APIGatewayIntegrations extends Construct {
                 .build();
         var url = httpApiGateway.getUrl();
         CfnOutput.Builder.create(this, "HttpApiGatewayUrlOutput").value(url).build();
-        CfnOutput.Builder.create(this, "HttpApiGatewayCurlOutput").value("curl -i " + url + "hello").build();
+        //CfnOutput.Builder.create(this, "HttpApiGatewayCurlOutput").value("curl -i " + url + "hello").build();
+        CfnOutput.Builder.create(this, "HttpApiGatewayCurlOutput").value("curl -i " + url + "invoicer").build();
     }
 
 }
