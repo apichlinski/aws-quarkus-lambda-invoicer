@@ -27,7 +27,6 @@ Private APIs are only supported by [REST API Gateway](https://docs.aws.amazon.co
 
 You can also build AWS Lambda `function.zip` and executable Quarkus JAR by extracting the extension into a Maven profile. Checkout: [https://adambien.blog/roller/abien/entry/hybrid_microprofile_deployments_with_quarkus](https://adambien.blog/roller/abien/entry/hybrid_microprofile_deployments_with_quarkus).
 
-See you at: [airhacks.live](https://airhacks.live)
 
 # in action
 
@@ -57,18 +56,5 @@ You can run the `lambda` project as regular Quarkus application with:
 
 `mvn compile quarkus:dev`
 
-The application is available under: `http://localhost:8080/hello`
+The application is available under: `http://localhost:8080/invoicer`
 
-## Deploying MicroProfile / Quarkus Application as AWS Lambda with Java AWS CDK
-
-[![Deploying MicroProfile / Quarkus Application as AWS Lambda with Java AWS CDK](https://i.ytimg.com/vi/NA0WjIgp4CQ/mqdefault.jpg)](https://www.youtube.com/embed/NA0WjIgp4CQ?rel=0)
-
-
-## Accelarating deployments with CDK v2 Watch
-
-
-Using `cdk watch` for faster deployments
-
-[![Accelerating Deployment with CDK v2 Watch](https://i.ytimg.com/vi/SK7ic9wTYqU/mqdefault.jpg)](https://www.youtube.com/embed/SK7ic9wTYqU?rel=0)
-
-See you at: [airhacks.live](https://airhacks.live)

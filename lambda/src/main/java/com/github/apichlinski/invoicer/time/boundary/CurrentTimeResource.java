@@ -1,4 +1,4 @@
-package com.github.apichlinski.lambda.time.boundary;
+package com.github.apichlinski.invoicer.time.boundary;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
